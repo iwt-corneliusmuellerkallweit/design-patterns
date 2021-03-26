@@ -19,7 +19,7 @@ weniger problemanfällig und für mehr Leute verständlich zu machen.
 Pauschal ist jedes Pattern anders. Und sie haben alle unterschiedliche Anwendungsfälle. Es gibt allerdings einige
 Vorteile, die bei Design Patterns immer wieder vorkommen:
 
-> **Design Pattern helfen dabei: **
+> **Design Pattern helfen dabei:**
 > - Ein gemeinsames Vokabular mit anderen OO-Designern aufzubauen.
 > - Fehler und Problemanfälligkeit zu reduzieren. (Patterns sind von so vielen Entwicklern getestet, da sind Probleme 
     meist ausgemerzt.)
@@ -43,7 +43,7 @@ ein passendes Pattern dann anzuwenden ist was Pattern-Meister ausmacht. Jedes Pr
 oder noch schlimmer, jedes Programm im Voraus durch die Linse von Pattern zu planen, bläht Projekte schnell auf und 
 macht sie komplexer als nötig.
 
-> **Gründe, Design Patterns nicht anzuwenden: **
+> **Gründe, Design Patterns nicht anzuwenden:**
 > - Es wäre Overkill.
 > - Neue Klassen und Strukturen erhöhen die Komplexität.
 > - Mehr Ebenen des Programms können die Effizienz auch senken.
@@ -92,7 +92,9 @@ Original-Klasse muss nie bearbeitet werden. So wird der Code widerständiger und
 
 > Sei nie von konkreten Klassen abhängig. Bevorzuge abstrakte Klassen.
 
-High-Level-Komponenten und Low-Level-Komponenten sollten beide von Abstraktion anstatt konkreter Klassen abhängig sein.
+Abstrakte Klassen oder Interfaces zu verwenden macht dein Programm um Unmengen flexibler. Neue Klassen des gleichen
+Interfaces (oder die von der gleichen abstrakten Klasse erben) lassen sich so viel einfacher in die Anwendung
+einverarbeiten.
 
 > Sprich nur mit deinen engsten Freunden.
 
@@ -104,8 +106,8 @@ ist ein fragiles System.
 > Die Großen rufen die Kleinen auf.
 
 Vermeide es, Abhängigkeiten kreuz und quer in der Klassenhierarchie anzusiedeln. Solche Systeme sind nur schwer zu
-durchsteigen und selten effizient. Stattdessen ist es meist besser, wenn die Klassen einer höheren Ebene direkt auf die
-betreffenden darunterliegenden Klassen zukommt, indem sie die Low-Level Methoden ansteuert.
+durchsteigen und selten effizient. Stattdessen ist es meist besser, wenn Klassenaufrufe zwischen den Klassen
+konzentriert in einer oder zwei Klassen stattfinden.
 
 > Es sollte nur einen Grund geben eine Klasse zu verändern.
 
